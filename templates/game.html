@@ -2,7 +2,25 @@
 
 {% block content %}
 
-<h1>This is question {{ question.index }}</h1>
+<div class="row d-flex justify-content-center" style="margin-top: 30vh">
+    <div class="card">
+        <div class="card-body">
+            <h1>This is cardset # {{ question.index }}</h1>
+            <h4>Shape -> {{ question.shape }}</h4>
+            <h4>Color -> {{ question.color }}</h4>
+            <h4>Shade -> {{ question.shade }}</h4>
+            <h4>Number -> {{ question.number }}</h4>
+        </div>
+    </div>
+</div>
+<div class="row d-flex justify-content-center" style="margin-top: 30px">
+    <form action="/game/{{ session_id }}/{{ game_id }}/{{ question._id }}/next">
+        <div class="form-group">
+            <button type="submit" class="btn btn-info">Next</button>
+        </div>
+    </form>
+</div>
+
 
 
 

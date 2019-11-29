@@ -3,7 +3,8 @@ from random import randint
 
 class SetTrainer:
     def __init__(self):
-        self.cards = self.populate_cards()
+        self.cards = []
+        self.populate_cards()
 
     def populate_cards(self):
         """Populate the set of cards with respective shape, number, color and shade attributes."""
@@ -44,7 +45,9 @@ class SetTrainer:
                         else:
                             number = '3'
 
-                        self.cards.append(Card(shape, color, number, shade))
+                        card = Card(shape, color, number, shade)
+
+                        self.cards.append(card)
 
     def get_cards(self, amount):
         output_cards = []
