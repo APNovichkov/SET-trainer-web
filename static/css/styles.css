@@ -1,0 +1,25 @@
+.hero-background-img {
+  position: relative;
+  background: rgba(0, 0, 0, 0.3); /* If our image is bright, we can tone it down with this darker overlay */
+  height: 100%;
+  width: 100%;
+}
+
+.hero-background-img:after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.9; /* Tone the image down further by giving it transparency */
+}
+
+.jumbotron-header{
+    color: #272727;
+}
